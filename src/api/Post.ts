@@ -1,5 +1,5 @@
 import posts from "../posts";
-import authors from "../config/authors";
+import authors from "./authors";
 import { useRef } from "react";
 
 export interface IPost {

@@ -1,5 +1,5 @@
 import { ITheme, TThemeColor } from "../types";
-import { getContrastYIQ, invertColor, lightenColor } from "./colorMethods";
+import { getContrastYIQ, invertColor, lightenColor, hexToRgb } from "./colorMethods";
 
 class DynamicTheme implements ITheme {
 
@@ -8,6 +8,8 @@ class DynamicTheme implements ITheme {
         background: new ThemeColor("#FFF")
     }
 }
+
+
 
 class ThemeColor implements TThemeColor {
     public main: string;
@@ -30,6 +32,10 @@ class ThemeColor implements TThemeColor {
 
     get text() {
         return getContrastYIQ(this.main as unknown as string);
+    }
+    
+    get rgb() {
+        return hexToRgb(this.main);
     }
 }
 
