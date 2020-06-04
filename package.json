@@ -1,6 +1,6 @@
 {
   "name": "sourcer",
-  "version": "0.1.0",
+  "version": "1.0.0-alpha.1",
   "private": true,
   "homepage": "https://drfr0st.github.io/sourcer",
   "dependencies": {
