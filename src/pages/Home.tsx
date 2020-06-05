@@ -1,5 +1,5 @@
 import React from "react";
-import { usePosts } from "../api/Post";
+import { usePosts, IPost } from "../api/Post";
 
 const Home = () => {
     const posts = usePosts();
@@ -9,10 +9,15 @@ const Home = () => {
 
         {
             // refactor to another component before extending..
-            posts.map(post => 
-                    <h4>{post.title} - {post.author.name}</h4>)
+            posts.map(post => <PostCard {...post} />)
         }
     </div>
+}
+
+const PostCard = (props: IPost) => {
+    if(!props.exists) return null;
+
+    return <h4>{props.title}</h4>
 }
 
 export default Home;

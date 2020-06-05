@@ -3,7 +3,7 @@ import LitteraProvider from "react-littera";
 import { ThemeProvider } from "react-jss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { Home as HomePage, Post as PostPage, Wrong as WrongPage } from "../pages";
+import { Home as HomePage, SinglePost as SinglePostPage, Wrong as WrongPage } from "../pages";
 import DynamicTheme from "../utils/theme";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Router>
             <Switch>
               <Route exact path="/" component={HomePage} />
-              <Route path="/p/:id" component={PostPage} />
+              <Route path="/p/:id" component={SinglePostPage} />
               <Route component={WrongPage} />
             </Switch>
           </Router>
