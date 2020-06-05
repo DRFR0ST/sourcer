@@ -22,7 +22,7 @@ const AppBar = (props: TAppBarProps) => {
 
     return <div className={ classes.root }>
         <div className={ classes.container }>
-            {location.pathname === "/" ? <h1 className={ classes.logo } onClick={navigate("/")}>Sourcer</h1> : <IconButton name="<-" />}
+            {location.pathname === "/" ? <h1 className={ classes.logo } onClick={navigate("/")}>Sourcer</h1> : <IconButton name="<" onClick={navigate("/")} />}
         </div>
     </div>
 }
