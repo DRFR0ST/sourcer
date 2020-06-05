@@ -13,6 +13,8 @@ jobs:
         run: |
           yarn install
           yarn build
+        env:
+          REACT_APP_BASENAME: /sourcer
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3

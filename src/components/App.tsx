@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <ThemeProvider theme={new DynamicTheme()}>
         <LitteraProvider language={locale} setLanguage={setLocale}>
-          <Router>
+          <Router basename={process.env.REACT_APP_BASENAME || "/"}>
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route path="/p/:id" component={SinglePostPage} />
