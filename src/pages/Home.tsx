@@ -1,5 +1,6 @@
 import React from "react";
 import { usePosts, IPost } from "../api/Post";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const posts = usePosts();
@@ -15,9 +16,8 @@ const Home = () => {
 }
 
 const PostCard = (props: IPost) => {
-    if(!props.exists) return null;
 
-    return <h4>{props.title}</h4>
+    return <Link to={`/p/${props.id}`}>{props.title}</Link>
 }
 
 export default Home;
