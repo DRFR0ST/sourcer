@@ -4,12 +4,12 @@ import { getContrastYIQ, invertColor, lightenColor, hexToRgb } from "./colorMeth
 class DynamicTheme implements ITheme {
 
     palette = {
-        primary: new ThemeColor("#9C6"),
-        background: new ThemeColor("#FFF")
+        primary: new ThemeColor("#579ed9"),
+        background: new ThemeColor("#d8e6f2")
     }
 
     boundaries = {
-        width: "1420px",
+        width: "1240px",
     }
 }
 

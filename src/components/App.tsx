@@ -15,7 +15,7 @@ function App() {
       <ThemeProvider theme={new DynamicTheme()}>
         <Router basename={process.env.REACT_APP_BASENAME || "/"}>
           <LitteraProvider language={locale} setLanguage={setLocale}>
-            <AppBar />
+              <AppBar />
 
               <Switch>
                 <Route exact path="/" component={HomePage} />

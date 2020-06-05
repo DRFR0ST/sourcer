@@ -27,7 +27,7 @@ const PostCard = (props: IPost & { featured?: boolean }) => {
 
 
                 <div style={{ minWidth: "45%" /* refactor me!!! */ }}>
-                    <Link className={ classes.title } to={`/p/${props.id}`}>{props.title}</Link>
+                    <h2><Link className={ classes.title } to={`/p/${props.id}`}>{props.title}</Link></h2>
                     <p>{props.author?.name}</p>
                     <p>{ moment(props.created_at).fromNow() }</p>
                 </div>

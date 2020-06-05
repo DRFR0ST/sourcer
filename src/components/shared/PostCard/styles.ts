@@ -4,7 +4,9 @@ export default (theme: ITheme) => ({
 
     root: {
         margin: "10px 0",
-        flexBasis: "45%"
+        flexBasis: "45%",
+        borderRadius: "12px",
+        height: "150px"
     },  
     image: {
         position: "absolute",
@@ -20,6 +22,8 @@ export default (theme: ITheme) => ({
         height: "auto",
         minHeight: "180px",
         position: "relative",
+        cursor: "pointer",
+        borderRadius: "12px 0 0 12px"
     },
     title: {
         color: "black",
@@ -30,7 +34,9 @@ export default (theme: ITheme) => ({
     },
     featured: {
         width: "100%",
-        flexBasis: "100%"
+        flexBasis: "100%",
+        height: "300px",
+        backgroundColor: "rgba(0, 0, 0, 0.05)"
     }
 
 });
