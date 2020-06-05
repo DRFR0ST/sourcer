@@ -8,7 +8,7 @@ export default (theme: ITheme) => ({
     container: {
         maxWidth: theme.boundaries.width,
         margin: "0 auto",
-        padding: "0 12px"
+        padding: `0 ${theme.boundaries.padding}`
     }
 
     

@@ -8,6 +8,7 @@ export interface ITheme {
 
     boundaries: {
         width: string,
+        padding: string
     }
 }
 

@@ -13,7 +13,7 @@ export default (theme: ITheme) => ({
     container: {
         maxWidth: theme.boundaries.width,
         margin: "0 auto",
-        padding: "0 24px"
+        padding: `0 ${theme.boundaries.padding}`
         
     }
     
