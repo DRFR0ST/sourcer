@@ -129,7 +129,7 @@ export const usePost = (id: string) => {
                     ref.current.content = md;
                 signal();
             });
-    // @ts-ignore
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return ref.current as IPost;
