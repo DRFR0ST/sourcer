@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import LitteraProvider from "react-littera";
 import { ThemeProvider } from "react-jss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import { AppBar } from "components/common";
+ 
 import { Home as HomePage, SinglePost as SinglePostPage, Wrong as WrongPage } from "../pages";
 import DynamicTheme from "../utils/theme";
 
@@ -12,15 +13,17 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={new DynamicTheme()}>
-        <LitteraProvider language={locale} setLanguage={setLocale}>
-          <Router basename={process.env.REACT_APP_BASENAME || "/"}>
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route path="/p/:id" component={SinglePostPage} />
-              <Route component={WrongPage} />
-            </Switch>
-          </Router>
-        </LitteraProvider>
+        <Router basename={process.env.REACT_APP_BASENAME || "/"}>
+          <LitteraProvider language={locale} setLanguage={setLocale}>
+            <AppBar />
+
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/p/:id" component={SinglePostPage} />
+                <Route component={WrongPage} />
+              </Switch>
+          </LitteraProvider>
+        </Router>
       </ThemeProvider>
     </div>
   );

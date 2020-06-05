@@ -9,6 +9,7 @@ export interface IPost {
     created_at: Date | null;
     languages: string[];
     topics: string[];
+    thumbnail_url: string;
     content?: string;
     exists: boolean;
     fetchContent: () => Promise<string | void | undefined>;
@@ -20,6 +21,7 @@ export class Post implements IPost {
     author: IAuthor | null;
     created_at: Date | null;
     languages: string[];
+    thumbnail_url: string;
     topics: string[];
     content: string;
 
@@ -34,6 +36,7 @@ export class Post implements IPost {
         this.created_at = new Date(meta?.created_at ?? "");
         this.languages = meta?.languages ?? [];
         this.topics = meta?.topics ?? [];
+        this.thumbnail_url = meta?.thumbnail_url || "";
         this.content = "";
     }
 
