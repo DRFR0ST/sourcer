@@ -1,7 +1,8 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import styles from "./styles";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
+import { IconButton } from "components/shared";
 
 type TAppBarProps = {
 
@@ -13,6 +14,7 @@ const useStyles = createUseStyles(styles);
 const AppBar = (props: TAppBarProps) => {
     const classes = useStyles();
     const history = useHistory();
+    const location = useLocation();
 
     const navigate = (path: string) => () => {
         history.push(path);
@@ -20,7 +22,7 @@ const AppBar = (props: TAppBarProps) => {
 
     return <div className={ classes.root }>
         <div className={ classes.container }>
-            <h1 className={ classes.logo } onClick={navigate("/")}>Sourcer</h1>
+            {location.pathname === "/" ? <h1 className={ classes.logo } onClick={navigate("/")}>Sourcer</h1> : <IconButton name="<-" />}
         </div>
     </div>
 }
