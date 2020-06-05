@@ -4,7 +4,6 @@ import { createUseStyles } from "react-jss";
 import { ITheme } from "../types";
 import ReactMarkdown from "react-markdown";
 import { usePost } from "../api/Post";
-//import useLittera from "react-littera";
 
 const useStyles = createUseStyles((theme: ITheme) => ({
     root: {

@@ -7,13 +7,17 @@ class DynamicTheme implements ITheme {
         primary: new ThemeColor("#9C6"),
         background: new ThemeColor("#FFF")
     }
+
+    boundaries = {
+        width: "1420px",
+    }
 }
 
 
 
 class ThemeColor implements TThemeColor {
     public main: string;
-
+ 
     constructor(baseColor: string) {
         this.main = baseColor;   
     }

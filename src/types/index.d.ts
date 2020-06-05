@@ -1,7 +1,13 @@
+declare module 'classnames';
+
 export interface ITheme {
     palette: {
         primary: TThemeColor,
         background: TThemeColor
+    }
+
+    boundaries: {
+        width: string,
     }
 }
 
