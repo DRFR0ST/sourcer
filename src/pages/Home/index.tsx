@@ -1,6 +1,5 @@
 import React from "react";
 import { usePosts } from "api/Post";
-import { Link, useHistory } from "react-router-dom";
 import styles from "./styles";
 import { createUseStyles } from "react-jss";
 import { PostCard, Flex } from "components/shared";

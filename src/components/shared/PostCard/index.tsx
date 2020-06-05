@@ -22,7 +22,7 @@ const PostCard = (props: IPost & { featured?: boolean }) => {
     return <Flex justifyContent="space-between" className={ rootClasses }>
 
                 <div className={ classes.imageWrapper }>
-                    <img className={ classes.image } onClick={navigate} src={props.thumbnail_url} />
+                    <img alt="thumbnail" className={ classes.image } onClick={navigate} src={props.thumbnail_url} />
                 </div>
 
 
