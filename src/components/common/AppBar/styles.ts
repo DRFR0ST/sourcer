@@ -14,7 +14,8 @@ export default (theme: ITheme) => ({
         userSelect: "none",
         fontSize: "48px",
         fontFamily: "'Teko', sans-serif",
-        margin: 0
+        margin: 0,
+        textShadow: "2px 2px rgba(0,0,0,0.3)"
     },
     container: {
         maxWidth: theme.boundaries.width,
