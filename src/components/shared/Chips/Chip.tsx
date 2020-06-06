@@ -2,7 +2,6 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import styles from "./styles";
 import Flex from '../Flex';
-import IconButton from '../IconButton';
 import Ink from "react-ink";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
