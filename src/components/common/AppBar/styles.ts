@@ -5,6 +5,8 @@ export default (theme: ITheme) => ({
     root: {
         height: "120px",
         width: "100%",
+        zIndex: 999,
+        position: "relative"
     },
     logo: {
         color: theme.palette.primary.main,
@@ -17,8 +19,10 @@ export default (theme: ITheme) => ({
     container: {
         maxWidth: theme.boundaries.width,
         margin: "0 auto",
-        padding: `0 ${theme.boundaries.padding}`
-        
+        padding: `0 ${theme.boundaries.padding}`   
+    },
+    icon: {
+        margin: "0 5px"
     }
     
 });

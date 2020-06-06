@@ -20,16 +20,23 @@ const AppBar = (props: TAppBarProps) => {
         history.push(path);
     }
 
+    // Set color to white if on post page.
+    const navButtonStyle = {
+        color: location.pathname.indexOf("/p/") > -1 ? "#FFF" : "#000"
+    }
+
     return <Flex alignItems="center" width="100%" className={ classes.root }>
         <Flex justifyContent="space-between" alignItems="center" width="100%" className={ classes.container }>
             {location.pathname === "/" ? 
                 <h1 className={ classes.logo } onClick={navigate("/")}>Sourcer</h1> 
                 // @ts-ignore -- wtf?
-                : <IconButton name="arrow-left" onClick={navigate("/")} />}
+                : <IconButton style={navButtonStyle} name="arrow-left" onClick={navigate("/")} />}
 
+            { location.pathname !== "/settings" && 
             <Flex justifyContent="flex-end" alignItems="center">
-                <IconButton name="cog" onClick={navigate("/")} />
-            </Flex>
+                <IconButton className={ classes.icon } style={navButtonStyle} name="search" onClick={navigate("/")} />
+                <IconButton className={ classes.icon } style={navButtonStyle} name="cog" onClick={navigate("/settings")} />
+            </Flex> }
         </Flex>
     </Flex>
 }

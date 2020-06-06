@@ -1,6 +1,8 @@
-import posts from "../posts";
+import posts from "config/posts";
 import { useRef, useEffect, useState } from "react";
 import { IAuthor, Author } from "./Author";
+import { Topic, ITopic } from "./Topic";
+import {useLittera} from "react-littera";
 
 export interface IPost {
     id: string;
@@ -8,11 +10,12 @@ export interface IPost {
     author: IAuthor | null;
     created_at: Date | null;
     languages: string[];
-    topics: string[];
+    topics: ITopic[];
     thumbnail_url: string;
     content?: string;
     exists: boolean;
     fetchContent: () => Promise<string | void | undefined>;
+    setLanguage: (language: string) => void;
 }
 
 export class Post implements IPost {
@@ -22,10 +25,11 @@ export class Post implements IPost {
     created_at: Date | null;
     languages: string[];
     thumbnail_url: string;
-    topics: string[];
+    topics: ITopic[];
     content: string;
+    activeLanguage: string;
 
-    constructor(id: string) {
+    constructor(id: string, initialLanguage?: string) {
         const meta = posts.find(p => p.id === id);
 
         //if(!meta) throw new Error(`Post with id ${id} could not be found.`);
@@ -35,13 +39,19 @@ export class Post implements IPost {
         this.author = new Author(meta?.author_id ?? "") as IAuthor;
         this.created_at = new Date(meta?.created_at ?? "");
         this.languages = meta?.languages ?? [];
-        this.topics = meta?.topics ?? [];
+        this.topics = meta?.topics.map((topic_id: string) => new Topic(topic_id)) ?? [];
         this.thumbnail_url = meta?.thumbnail_url || "";
         this.content = "";
+        this.activeLanguage = initialLanguage ?? "en_US";
     }
 
     get exists() {
         return !!this.title;
+    }
+
+    setLanguage(language: string) {
+        if(this.languages.includes(language))
+            this.activeLanguage = language;
     }
 
     // TODO: Implement language detection.
@@ -52,7 +62,7 @@ export class Post implements IPost {
             let url;
     
             try {
-                url = require(`../posts/${this.id}/${this.id}--en_US.md`)
+                url = require(`../posts/${this.id}/${this.id}--${this.activeLanguage}.md`)
             } catch(err) {
                 console.error(err);
             }
@@ -91,7 +101,8 @@ export const usePosts = (volume?: number) => {
 }
 
 export const usePost = (id: string) => {
-    const ref = useRef<IPost>(new Post(id));
+    const [, language] = useLittera();
+    const ref = useRef<IPost>(new Post(id, language));
 
     const signal = useSignal();
 

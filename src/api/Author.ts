@@ -3,6 +3,7 @@ import authors from "config/authors";
 
 export interface IAuthor {
     name: string;
+    surname: string;
     id: string;
     posts: IPost[];
     exists: boolean
@@ -10,6 +11,7 @@ export interface IAuthor {
 
 export class Author implements IAuthor {
     name: string;
+    surname: string;
     id: string;
 
     constructor(author_id: string) {
@@ -18,6 +20,7 @@ export class Author implements IAuthor {
         //if(!author) throw new Error(`Author with id ${author_id} cound not be found.`)
 
         this.name = author?.name ?? "";
+        this.surname = author?.surname ?? "";
         this.id = author_id;
     }
 

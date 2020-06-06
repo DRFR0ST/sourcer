@@ -34,6 +34,7 @@ type FlexProps = {
   style?: object
   width?: number | string
   height?: number | string
+  onClick?: () => void
 } & FlexProperties
 
 const reduceProps = (props: FlexProps, ...args: string[]) => {
@@ -56,10 +57,11 @@ const Flex = (props: FlexProps) => {
 
   const style = Object.freeze({
     display: "flex",
-      ...reducedProps,
+    ...reducedProps,
+    ...(props.style ? props.style : {})
   });
 
-  return <div style={style} className={props.className}>{props.children}</div>
+  return <div style={style} onClick={props.onClick} className={props.className}>{props.children}</div>
 }
 
 export default Flex;

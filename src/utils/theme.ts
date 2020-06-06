@@ -10,7 +10,8 @@ class DynamicTheme implements ITheme {
 
     boundaries = {
         width: "1240px",
-        padding: "24px"
+        padding: "24px",
+        rightOffset: (((window.innerWidth - 1240) / 2) || 24) + "px"
     }
 }
 

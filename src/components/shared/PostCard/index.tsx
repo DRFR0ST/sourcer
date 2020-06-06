@@ -23,17 +23,17 @@ const PostCard = (props: IPost & { featured?: boolean }) => {
 
     const rootClasses = cx(classes.root, { [classes.featured]: props.featured });
 
-    return <Flex justifyContent={isMobile ? "flex-start" : "space-between"} flexDirection={isMobile ? "column" : "row"} className={ rootClasses }>
+    return <Flex onClick={navigate} justifyContent={isMobile ? "flex-start" : "space-between"} flexDirection={isMobile ? "column" : "row"} className={ rootClasses }>
 
                 <div className={ classes.imageWrapper } onClick={navigate}>
                     <img alt="thumbnail" className={ classes.image } src={props.thumbnail_url} />
                     <Ink />
                 </div>
 
-
                 <div className={ classes.contentWrapper }>
-                    <h2><Link className={ classes.title } to={`/p/${props.id}`}>{props.title}</Link></h2>
-                    <p>{props.author?.name}</p>
+                    <h2 style={{margin: 0}} className={ classes.title }>{props.title}</h2>
+                    <p>{props.author?.name} {props.author?.surname}</p>
+                    <p>{props.topics[0].label}</p>
                     <p>{ moment(props.created_at).fromNow() }</p>
                 </div>
 

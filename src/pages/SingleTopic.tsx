@@ -3,21 +3,23 @@ import { useParams } from "react-router-dom";
 import { createUseStyles } from "react-jss";
 import { ITheme } from "../types";
 import ReactMarkdown from "react-markdown";
-import { usePost } from "../api/Post";
+import { usePost, usePosts } from "../api/Post";
+import { useTopics, useTopic } from "api/Topic";
+import { PostCard } from "components/shared";
 
 const useStyles = createUseStyles((theme: ITheme) => ({
     root: {
-        position: "relative",
-        maxWidth: "100%"
+        
+
+
+        // "& p": {
+        //     opacity: 0.5
+        // }
     },
     container: {
         maxWidth: theme.boundaries.width,
         margin: "0 auto",
-        padding: `0 ${theme.boundaries.padding}`,
-        top: "-90px",
-        position: "relative",
-
-
+        padding: `0 ${theme.boundaries.padding}`
     },
     image: {
         width: "100%",
@@ -29,33 +31,24 @@ const useStyles = createUseStyles((theme: ITheme) => ({
     },
     imageWrapper: {
         position: "relative",
-        top: "-120px",
+        width: "100%",
         height: "300px",
-        overflow: "hidden",
-        
-        "@media only screen and (min-width: 620px)": {
-            maxWidth: theme.boundaries.width,
-            margin: "0 auto",
-            padding: `0 ${theme.boundaries.padding}`
-        }
+        overflow: "hidden"
     }
 }));
 
-const SinglePost = () => {
+const SingleTopic = () => {
     const { id } = useParams();
     const classes = useStyles();
-    
-    const post = usePost(id);
 
+    const topic = useTopic(id);
 
     return <div className={classes.root}>
-        <div className={classes.imageWrapper}>
-            <img alt="thumbnail" src={post.thumbnail_url} className={classes.image} />
-        </div>
         <div className={classes.container}>
-            <ReactMarkdown source={post.content} />
+            <h2>{id}</h2>
+            {topic.childPosts.map(post => <PostCard {...post} />)}
         </div>
     </div>
 }
 
-export default SinglePost;
+export default SingleTopic;
