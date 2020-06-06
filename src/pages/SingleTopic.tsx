@@ -2,12 +2,9 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { createUseStyles } from "react-jss";
 import { ITheme } from "../types";
-import ReactMarkdown from "react-markdown";
-import { usePost, usePosts } from "../api/Post";
-import { useTopics, useTopic } from "api/Topic";
+import { useTopic } from "api/Topic";
 import { Card, Flex } from "components/shared";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 const useStyles = createUseStyles((theme: ITheme) => ({
     root: {
