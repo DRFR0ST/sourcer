@@ -1,11 +1,12 @@
 import topics from "config/topics";
 import { useRef } from "react";
 import { getParsedPosts, IPost } from "./Post";
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export interface ITopic {
     label: string;
     id: string;
-    icon?: string;
+    icon?: IconProp;
     thumbnail_url: string;
     color: string;
     exists: boolean;
@@ -15,7 +16,7 @@ export interface ITopic {
 export class Topic implements ITopic {
     id: string;
     label: string;
-    icon?: string;
+    icon?: IconProp;
     thumbnail_url: string;
     color: string;
 
@@ -23,9 +24,10 @@ export class Topic implements ITopic {
         const topic = topics.find(a => a.id === topic_id);
 
         this.id             = topic_id;
-        this.label          = topic?.label ?? "";
+        this.label          = topic?.label ?? "Unknown";
         this.thumbnail_url  = topic?.thumbnail_url ?? "";
         this.color          = topic?.color ?? "#000";
+        // @ts-ignore
         this.icon           = topic?.icon ?? undefined;
     }
 

@@ -11,6 +11,8 @@ export interface ITheme {
         padding: string,
         rightOffset: string
     }
+
+    shadow: string[]
 }
 
 export type TThemeColor = {

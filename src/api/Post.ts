@@ -16,6 +16,7 @@ export interface IPost {
     exists: boolean;
     fetchContent: () => Promise<string | void | undefined>;
     setLanguage: (language: string) => void;
+    short: string;
 }
 
 export class Post implements IPost {
@@ -28,6 +29,7 @@ export class Post implements IPost {
     topics: ITopic[];
     content: string;
     activeLanguage: string;
+    short: string;
 
     constructor(id: string, initialLanguage?: string) {
         const meta = posts.find(p => p.id === id);
@@ -43,6 +45,7 @@ export class Post implements IPost {
         this.thumbnail_url = meta?.thumbnail_url || "";
         this.content = "";
         this.activeLanguage = initialLanguage ?? "en_US";
+        this.short = meta?.short || "";
     }
 
     get exists() {

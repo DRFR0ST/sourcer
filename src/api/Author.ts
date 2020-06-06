@@ -6,13 +6,15 @@ export interface IAuthor {
     surname: string;
     id: string;
     posts: IPost[];
-    exists: boolean
+    exists: boolean;
+    avatar_url: string;
 }
 
 export class Author implements IAuthor {
     name: string;
     surname: string;
     id: string;
+    avatar_url: string;
 
     constructor(author_id: string) {
         const author = authors.find(a => a.id === author_id);
@@ -21,6 +23,7 @@ export class Author implements IAuthor {
 
         this.name = author?.name ?? "";
         this.surname = author?.surname ?? "";
+        this.avatar_url = author?.avatar_url ?? `https://eu.ui-avatars.com/api/?name=${this.name}+${this.surname}`;
         this.id = author_id;
     }
 

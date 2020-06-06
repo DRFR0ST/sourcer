@@ -55,7 +55,12 @@ export default (theme: ITheme) => ({
         textShadow: "1px 1px 1px rgba(0,0,0,0.004)",
 
         "&:hover, &:active": {
-            borderColor: theme.palette.primary.main
+            borderColor: theme.palette.primary.main,
+
+            "& svg path": {
+                fill: theme.palette.primary.main,
+                transition: "all 155ms ease"
+            }
         }
 
         // "&:active": {
@@ -88,6 +93,10 @@ export default (theme: ITheme) => ({
         borderRadius: "32px",
         marginRight: "4px",
         border: "1px solid rgba(0,0,0,.10)",
+        "& svg path": {
+            fill: "rgba(0, 0, 0, 0.3)",
+            transition: "all 155ms ease"
+        }
     }
 
 

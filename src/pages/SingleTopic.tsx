@@ -5,7 +5,9 @@ import { ITheme } from "../types";
 import ReactMarkdown from "react-markdown";
 import { usePost, usePosts } from "../api/Post";
 import { useTopics, useTopic } from "api/Topic";
-import { PostCard } from "components/shared";
+import { Card, Flex } from "components/shared";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 const useStyles = createUseStyles((theme: ITheme) => ({
     root: {
@@ -45,8 +47,14 @@ const SingleTopic = () => {
 
     return <div className={classes.root}>
         <div className={classes.container}>
-            <h2>{id}</h2>
-            {topic.childPosts.map(post => <PostCard {...post} />)}
+            <Flex alignItems="center" style={{marginBottom: "15px"}}>
+                {topic.icon && <FontAwesomeIcon icon={topic.icon} size="2x" />}
+                <h2 style={{margin: 0, marginLeft: "12px"}}>{topic.label}</h2>
+            </Flex>
+            <Flex justifyContent="center" alignItems="baseline" flexWrap="wrap" width="101%">
+                {topic.childPosts.map(post => <Card {...post} />)}
+            </Flex>
+
         </div>
     </div>
 }

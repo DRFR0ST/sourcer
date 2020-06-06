@@ -2,12 +2,14 @@ import React from "react";
 import { usePosts } from "api/Post";
 import styles from "./styles";
 import { createUseStyles, useTheme } from "react-jss";
-import { PostCard, Flex } from "components/shared";
+import { PostCard, Flex, Card } from "components/shared";
 import Chips from "components/shared/Chips";
 import { useTopics } from "api/Topic";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { useHistory } from "react-router-dom";
 import { ITheme } from "types";
+import { useMediaQuery } from "@react-hook/media-query";
+
 
 // Creates hook composing styles.
 const useStyles = createUseStyles(styles);
@@ -31,15 +33,14 @@ const Home = () => {
 
             <h2>Featured</h2>
 
-            <PostCard featured {...posts[0]} />
-            <div>
+            <Flex justifyContent="center" alignItems="baseline" flexWrap="wrap" width="101%">
                 {
                     // refactor to another component before extending..
                     //posts.map(post => <PostCard {...post} />)
 
-                    posts.filter((__p, i) => i !== 0).map(post => <PostCard {...post} />)
+                    posts.map(post => <Card {...post} />)
                 }
-            </div>
+            </Flex>
         </div>
     </div>
 }

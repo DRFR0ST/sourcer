@@ -11,10 +11,24 @@ class DynamicTheme implements ITheme {
     boundaries = {
         width: "1240px",
         padding: "24px",
-        rightOffset: (((window.innerWidth - 1240) / 2) || 24) + "px"
+        rightOffset: getRightOffset(1240, 24) + "px"
     }
+
+    shadow = [
+        "0",
+        "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+        "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
+        "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
+        "0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)",
+    ]
+    
 }
 
+const getRightOffset = (maxWidth: number, defaultOffset: number) => {
+    if(maxWidth >= window.innerWidth) return defaultOffset;
+    return (((window.innerWidth - maxWidth)- 16)/2) || 24;
+}
 
 
 class ThemeColor implements TThemeColor {

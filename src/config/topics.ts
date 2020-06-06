@@ -1,4 +1,16 @@
 import { ITopic } from "api/Topic";
+import {IconProp} from "@fortawesome/fontawesome-svg-core";
+
+import { faReact, faUbuntu, faJs, faWordpress } from "@fortawesome/free-brands-svg-icons";
+import { faPalette, faCode, faServer, faNetworkWired, faMobile, faDatabase } from '@fortawesome/free-solid-svg-icons'
+
+type IRawTopic = {
+    label: string;
+    id: string;
+    icon: IconProp;
+    color: string;
+    thumbnail_url: string;
+}
 
 export default
     [
@@ -6,52 +18,74 @@ export default
         {
             label: "React",
             id: "react",
-            icon: "react",
-            color: "#fff"
+            icon: faReact,
+            color: "#fff",
+            thumbnail_url: ""
         },
         {
-            label: "CSS/SCSS",
-            id: "css/scss",
-            icon: "computer",
-            color: "#9C6"
+            label: "Design",
+            id: "design",
+            icon: faPalette,
+            color: "#9C6",
+            thumbnail_url: ""
         },
         {
             label: "Hosting",
             id: "hosting",
-            icon: "code",
-            color: "#9C6"
+            icon: faServer,
+            color: "#9C6",
+            thumbnail_url: ""
         },
         {
             label: "Snippets",
             id: "snippets",
-            icon: "cog",
-            color: "#9C6"
+            icon: faCode,
+            color: "#9C6",
+            thumbnail_url: ""
         },
         {
             label: "Network",
             id: "network",
-            icon: "cog",
-            color: "#9C6"
+            icon: faNetworkWired,
+            color: "#9C6",
+            thumbnail_url: ""
         },
         {
             label: "Apps",
             id: "apps",
-            icon: "cog",
-            color: "#9C6"
+            icon: faMobile,
+            color: "#9C6",
+            thumbnail_url: ""
         },
         {
             label: "DevOps",
             id: "devops",
-            icon: "cog",
-            color: "#9C6"
+            icon: faDatabase,
+            color: "#9C6",
+            thumbnail_url: ""
+        },
+        {
+            label: "JavaScript",
+            id: "javascript",
+            icon: faJs,
+            color: "#9C6",
+            thumbnail_url: ""
+        },
+        {
+            label: "Wordpress",
+            id: "wordpress",
+            icon: faWordpress,
+            color: "#9C6",
+            thumbnail_url: ""
         },
         {
             label: "Linux",
             id: "linux",
-            icon: "linux",
-            color: "#9C6"
+            icon: faUbuntu,
+            color: "#9C6",
+            thumbnail_url: ""
         },
 
         
 
-    ] as ITopic[]
+    ] as IRawTopic[]
