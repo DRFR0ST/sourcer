@@ -7,6 +7,7 @@ import { Flex } from "components/shared";
 import moment from "moment";
 import cx from "classnames";
 import { useMediaQuery } from "@react-hook/media-query";
+import Ink from "react-ink";
 
 const useStyles = createUseStyles(styles);
 
@@ -24,8 +25,9 @@ const PostCard = (props: IPost & { featured?: boolean }) => {
 
     return <Flex justifyContent={isMobile ? "flex-start" : "space-between"} flexDirection={isMobile ? "column" : "row"} className={ rootClasses }>
 
-                <div className={ classes.imageWrapper }>
-                    <img alt="thumbnail" className={ classes.image } onClick={navigate} src={props.thumbnail_url} />
+                <div className={ classes.imageWrapper } onClick={navigate}>
+                    <img alt="thumbnail" className={ classes.image } src={props.thumbnail_url} />
+                    <Ink />
                 </div>
 
 

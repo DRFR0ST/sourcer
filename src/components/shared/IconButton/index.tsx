@@ -1,9 +1,12 @@
 import React from "react";
 import styles from "./styles";
 import { createUseStyles } from "react-jss";
+import Ink from "react-ink";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 type TIconButtonProps = {
-    name: string;
+    name: IconProp;
     onClick: () => void
 }
 
@@ -15,7 +18,10 @@ const IconButton = ({ name, onClick }: TIconButtonProps) => {
     // TODO: Add styling.
     // TODO: Implement icons.
     // TODO: Just finish the thang..
-    return <button onClick={onClick} className={ classes.root }><span>{name}</span></button>
+    return  <button onClick={onClick} className={ classes.root }>
+                <FontAwesomeIcon icon={name} size="lg" />
+                <Ink />
+            </button>
 }
 
 export default IconButton;

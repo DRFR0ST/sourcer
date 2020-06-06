@@ -1,6 +1,6 @@
 import posts from "../posts";
-import authors from "./authors";
 import { useRef, useEffect, useState } from "react";
+import { IAuthor, Author } from "./Author";
 
 export interface IPost {
     id: string;
@@ -77,35 +77,6 @@ export class Post implements IPost {
                     console.error(err);
                 });
         })
-    }
-}
-
-export interface IAuthor {
-    name: string;
-    id: string;
-    posts: IPost[];
-    exists: boolean
-}
-
-export class Author implements IAuthor {
-    name: string;
-    id: string;
-
-    constructor(author_id: string) {
-        const author = authors.find(a => a.id === author_id);
-
-        //if(!author) throw new Error(`Author with id ${author_id} cound not be found.`)
-
-        this.name = author?.name ?? "";
-        this.id = author_id;
-    }
-
-    get exists() {
-        return !!this.name;
-    }
-
-    get posts() {
-        return getParsedPosts().filter(p => p.author?.id === this.id);
     }
 }
 

@@ -1,4 +1,4 @@
-import { IAuthor } from "./Post";
+import { IAuthor } from "api/Author";
 
 export default
     [

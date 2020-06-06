@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AppBar } from "components/common";
  
 import { Home as HomePage, SinglePost as SinglePostPage, Wrong as WrongPage } from "../pages";
-import DynamicTheme from "../utils/theme";
+import DynamicTheme from "utils/theme";
+import "utils/icons"
 
 function App() {
   const [locale, setLocale] = useState("en_US");
