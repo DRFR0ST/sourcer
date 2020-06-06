@@ -1,6 +1,6 @@
 import React from "react";
 import { IPost } from "api/Post";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { createUseStyles } from "react-jss";
 import styles from "./styles";
 import { Flex } from "components/shared";
@@ -34,7 +34,7 @@ const PostCard = (props: IPost & { featured?: boolean }) => {
                     <h2 style={{margin: 0}} className={ classes.title }>{props.title}</h2>
                     <p>{props.author?.name} {props.author?.surname}</p>
                     <p>{props.topics[0].label}</p>
-                    <img alt="author photo" src={props.author?.avatar_url} style={{width: "64px", height: "64px", borderRadius: "64px"}} />
+                    <img alt="author" src={props.author?.avatar_url} style={{width: "64px", height: "64px", borderRadius: "64px"}} />
                     <p>{ moment(props.created_at).fromNow() }</p>
                 </div>
             </Flex>

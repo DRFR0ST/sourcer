@@ -2,13 +2,12 @@ import React from "react";
 import { usePosts } from "api/Post";
 import styles from "./styles";
 import { createUseStyles, useTheme } from "react-jss";
-import { PostCard, Flex, Card } from "components/shared";
+import { Flex, Card } from "components/shared";
 import Chips from "components/shared/Chips";
 import { useTopics } from "api/Topic";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { useHistory } from "react-router-dom";
 import { ITheme } from "types";
-import { useMediaQuery } from "@react-hook/media-query";
 
 
 // Creates hook composing styles.

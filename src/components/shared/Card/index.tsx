@@ -1,8 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { IPost, useSignal, usePost } from 'api/Post';
+import { IPost, usePost } from 'api/Post';
 import Flex from '../Flex';
-import ReactMarkdown from "react-markdown";
 import cx from "classnames";
 
 import styles from "./styles";

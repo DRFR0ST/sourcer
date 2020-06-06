@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from "./styles";
 import { createUseStyles } from 'react-jss';
-import { IconButton } from 'components/shared';
 import { useLittera } from "react-littera";
 
 const useStyles = createUseStyles(styles);
@@ -15,7 +14,7 @@ const translations = {
 
 const Settings = () => {
     const classes = useStyles();
-    const [translated, language, setLanguage] = useLittera(translations);
+    const [translated, , setLanguage] = useLittera(translations);
 
     return <div>
 

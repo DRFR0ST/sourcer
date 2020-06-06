@@ -1,4 +1,3 @@
-import { ITopic } from "api/Topic";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 
 import { faReact, faUbuntu, faJs, faWordpress } from "@fortawesome/free-brands-svg-icons";
