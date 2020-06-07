@@ -55,10 +55,10 @@ export default (theme: ITheme) => ({
         textShadow: "1px 1px 1px rgba(0,0,0,0.004)",
 
         "&:hover, &:active": {
-            borderColor: theme.palette.primary.toString(),
+            borderColor: theme.palette.secondary.toString(),
 
             "& svg path": {
-                fill: theme.palette.primary.toString(),
+                fill: theme.palette.secondary.toString(),
                 transition: "all 155ms ease"
             }
         }

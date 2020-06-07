@@ -5,6 +5,7 @@ declare module 'classnames';
 export interface ITheme {
     palette: {
         primary: Color<string>,
+        secondary: Color<string>,
         background: Color<string>
     }
 

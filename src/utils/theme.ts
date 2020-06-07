@@ -4,7 +4,8 @@ import Color from "color";
 class DynamicTheme implements ITheme {
 
     palette = {
-        primary: Color("#579ed9"),
+        primary: Color("#0E3D44"),
+        secondary: Color("#94E79D"),
         background: Color("#f8f8f8")
     }
 

@@ -11,7 +11,7 @@ import { useHistory } from 'react-router-dom';
 
 const useStyles = createUseStyles(styles);
 
-export type ICardpost = IPost & { featured?: boolean };
+export type ICardpost = IPost & { featured?: boolean, onClick?: () => void };
 
 const Card = (props: ICardpost) => {
     const classes = useStyles();
@@ -25,7 +25,11 @@ const Card = (props: ICardpost) => {
         history.push(path)
     }
 
-    return <div className={rootClasses}>
+    const handleClick = () => {
+        props.onClick && props.onClick();
+    }
+
+    return <div className={rootClasses} onClick={handleClick}>
         <div className={classes.imageWrapper}>
             <CardBadge label={post.topics[0].label} onClick={navigate(`/t/${post.topics[0].id}`)} />
             <Ink /> 

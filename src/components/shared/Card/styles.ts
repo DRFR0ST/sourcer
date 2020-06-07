@@ -38,9 +38,9 @@ export default (theme: ITheme) => ({
     
     footerWrapper: {
         backgroundColor: "rgba(200, 200, 200, 0.15)",
+        borderTop: "1px solid rgba(0, 0, 0, 0.02)",
         borderRadius: "0 0 8px 8px",
         padding: "8px 16px",
-        borderTop: "1px solid rgba(0, 0, 0, 0.02)",
         "& p": {
             margin: 0,
             opacity: 0.6,
@@ -84,9 +84,9 @@ export default (theme: ITheme) => ({
         minWidth: "64px",
         maxWidth: "30%",
         borderRadius: "32px",
-        fontSize: "18px",
+        fontSize: "14px",
         backgroundColor: theme.palette.primary.toString(),
-        color: theme.palette.primary.isLight() ? "#FFF" : "#000",
+        color: theme.palette.primary.isLight() ? "#000" : "#FFF",
         zIndex: 900,
         boxShadow: theme.shadow[2]
     }

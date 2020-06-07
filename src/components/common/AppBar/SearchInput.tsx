@@ -1,10 +1,12 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import Modal from 'react-modal';
 import { createUseStyles } from "react-jss";
 import styles from "./styles";
 import { usePosts } from "api/Post";
-import { Card } from "components/shared";
+import { Flex, SlimCard } from "components/shared";
 import Masonry from 'react-masonry-component';
+import EmptyState from "assets/empty.svg";
+import { useMediaQuery } from "@react-hook/media-query";
 
 
 const useStyles = createUseStyles(styles);
@@ -15,8 +17,13 @@ const SearchInput = ({ open, onClose, className, overlayClassName, bodyOpenClass
     const [search, setSearch] = useState("");
     const classes = useStyles();
     const posts = usePosts();
+    const isMobile = useMediaQuery('only screen and (max-width: 620px)')
 
-    const filterdPosts = useMemo(() => {
+    useEffect(() => {
+        setSearch("");
+    }, [open]);
+
+    const filteredPosts = useMemo(() => {
         return posts.filter(post => {
             if(!search) return false;
             if(post.id.includes(search)) return true;
@@ -42,7 +49,7 @@ const SearchInput = ({ open, onClose, className, overlayClassName, bodyOpenClass
     }
 
     const modalStyle = {
-        content: { backgroundColor: "transparent", border: 0, zIndex: 9999 }, 
+        content: { backgroundColor: "transparent", border: 0, zIndex: 9999, overflow: "hidden", width: "90%", left: 0 }, 
         overlay: { zIndex: 9998, backgroundColor: "rgba(0, 0, 0, 0.35)" }
     }
 
@@ -56,14 +63,19 @@ const SearchInput = ({ open, onClose, className, overlayClassName, bodyOpenClass
         style={modalStyle}
         contentLabel="Example Modal"
     >
-        <div style={{width: "60%", margin: "0 auto"}}>
+        <div style={{width: isMobile ? "100%" : "60%", margin: "0 auto"}}>
             <div className={classes.inputWrapper}>
-                <input value={search} onChange={handleChange} placeholder="Search" className={classes.input} />
-            </div>
+                <input autoFocus value={search} onChange={handleChange} placeholder="Search" className={classes.input} />
+            </div> 
             <div className={classes.outputWrapper}>
-                <Masonry style={{ margin: "0 auto", position: "relative" }}>
-                    { filterdPosts.map(post => <Card key={post.id} {...post} />) }
-                </Masonry>
+                {filteredPosts.length > 0 ? 
+                    <Masonry style={{ position: "relative" }}>
+                        { filteredPosts.map(post => <SlimCard key={post.id} onClick={handleClose} {...post} />) }
+                    </Masonry>
+                    :   <Flex justifyContent="center" alignItems="center" className={classes.empty}>
+                            <img src={EmptyState} alt="empty-state" />
+                        </Flex> 
+                }
             </div>
         </div>
     </Modal>

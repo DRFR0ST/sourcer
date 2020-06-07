@@ -47,8 +47,23 @@ export default (theme: ITheme) => ({
     outputWrapper: {
         position: "relative",
         marginTop: "15px",
-        backgroundColor: theme.palette.background.darken(0.2).toString(),
-        borderRadius: "8px"
+        backgroundColor: theme.palette.background.toString(),
+        borderRadius: "8px",
+        height: "calc(80vh - 64px)",
+        overflowY: "auto",
+        padding: "32px 24px"
+    },
+
+    nothingText: {
+        margin: "10px",
+    },
+
+    empty: {
+        width: "100%",
+        height: "100%",
+        "& img": {
+            width: "300px",
+        }
     }
     
 });
