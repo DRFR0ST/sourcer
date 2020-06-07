@@ -1,7 +1,4 @@
-# Welcome to Jamrock
-### Damian Marley
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/_GZlJGERbvE/0.jpg)](https://www.youtube.com/watch?v=_GZlJGERbvE)
+[![IMAGE ALT TEXT HERE](https://i.imgur.com/7eR9Szv.jpg)](https://www.youtube.com/watch?v=_GZlJGERbvE)
 
 ## Lyrics
 

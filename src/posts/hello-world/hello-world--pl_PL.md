@@ -1,3 +1,1 @@
-# Witaj Świecie!
-
 ## Język: Polski

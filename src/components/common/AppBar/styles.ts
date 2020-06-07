@@ -5,17 +5,16 @@ export default (theme: ITheme) => ({
     root: {
         height: "120px",
         width: "100%",
-        zIndex: 999,
+        zIndex: 950,
         position: "relative"
     },
     logo: {
-        color: theme.palette.primary.main,
+        color: theme.palette.primary.toString(),
         cursor: "pointer",
         userSelect: "none",
-        fontSize: "48px",
-        fontFamily: "'Teko', sans-serif",
-        margin: 0,
-        textShadow: "2px 2px rgba(0,0,0,0.3)"
+        fontSize: "42px",
+        fontFamily: "'Sarabun', sans-serif",
+        margin: 0
     },
     container: {
         maxWidth: theme.boundaries.width,

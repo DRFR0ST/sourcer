@@ -1,11 +1,11 @@
-import { ITheme, TThemeColor } from "../types";
-import { getContrastYIQ, invertColor, lightenColor, hexToRgb } from "./colorMethods";
+import { ITheme } from "../types";
+import Color from "color";
 
 class DynamicTheme implements ITheme {
 
     palette = {
-        primary: new ThemeColor("#579ed9"),
-        background: new ThemeColor("#d8e6f2")
+        primary: Color("#579ed9"),
+        background: Color("#f8f8f8")
     }
 
     boundaries = {
@@ -28,35 +28,6 @@ class DynamicTheme implements ITheme {
 const getRightOffset = (maxWidth: number, defaultOffset: number) => {
     if(maxWidth >= window.innerWidth) return defaultOffset;
     return (((window.innerWidth - maxWidth)- 16)/2) || 24;
-}
-
-
-class ThemeColor implements TThemeColor {
-    public main: string;
- 
-    constructor(baseColor: string) {
-        this.main = baseColor;   
-    }
-
-    get darker() {
-        return lightenColor(this.main as unknown as string, 15);
-    }
-
-    get lighter() {
-        return lightenColor(this.main as unknown as string, 10);
-    }
-
-    get inverted() {
-        return invertColor(this.main as unknown as string);
-    }
-
-    get text() {
-        return getContrastYIQ(this.main as unknown as string);
-    }
-    
-    get rgb() {
-        return hexToRgb(this.main);
-    }
 }
 
 export default DynamicTheme;

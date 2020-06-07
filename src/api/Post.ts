@@ -22,7 +22,7 @@ export interface IPost {
 export class Post implements IPost {
     id: string;
     title: string;
-    author: IAuthor | null;
+    author: IAuthor;
     created_at: Date | null;
     languages: string[];
     thumbnail_url: string;

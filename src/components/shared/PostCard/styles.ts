@@ -43,7 +43,7 @@ export default (theme: ITheme) => ({
     featured: {
         width: "100%",
         flexBasis: "100%",
-        borderColor: theme.palette.primary.main
+        borderColor: theme.palette.primary.toString()
     },
     contentWrapper: {
         position: "relative",

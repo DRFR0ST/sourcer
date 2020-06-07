@@ -2,12 +2,13 @@ import React from "react";
 import { usePosts } from "api/Post";
 import styles from "./styles";
 import { createUseStyles, useTheme } from "react-jss";
-import { Flex, Card } from "components/shared";
+import { Card } from "components/shared";
 import Chips from "components/shared/Chips";
 import { useTopics } from "api/Topic";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { useHistory } from "react-router-dom";
 import { ITheme } from "types";
+import Masonry from 'react-masonry-component';
 
 
 // Creates hook composing styles.
@@ -32,14 +33,12 @@ const Home = () => {
 
             <h2>Featured</h2>
 
-            <Flex justifyContent="center" alignItems="baseline" flexWrap="wrap" width="101%">
-                {
-                    // refactor to another component before extending..
-                    //posts.map(post => <PostCard {...post} />)
-
-                    posts.map(post => <Card {...post} />)
-                }
-            </Flex>
+            <Masonry
+                options={{}} // default {}
+                disableImagesLoaded={false} // default false
+            >
+               { posts.map(post => <Card {...post} />) }
+            </Masonry>
         </div>
     </div>
 }

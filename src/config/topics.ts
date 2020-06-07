@@ -1,7 +1,7 @@
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 
 import { faReact, faUbuntu, faJs, faWordpress } from "@fortawesome/free-brands-svg-icons";
-import { faPalette, faCode, faServer, faNetworkWired, faMobile, faDatabase } from '@fortawesome/free-solid-svg-icons'
+import { faPalette, faCode, faServer, faNetworkWired, faMobile, faDatabase, faDumpster } from '@fortawesome/free-solid-svg-icons'
 
 type IRawTopic = {
     label: string;
@@ -81,6 +81,13 @@ export default
             label: "Linux",
             id: "linux",
             icon: faUbuntu,
+            color: "#9C6",
+            thumbnail_url: ""
+        },
+        {
+            label: "Offtopic",
+            id: "offtopic",
+            icon: faDumpster,
             color: "#9C6",
             thumbnail_url: ""
         },

@@ -4,7 +4,7 @@ export default (theme: ITheme) => ({
 
     root: {
         position: "relative",
-        width: "30%",
+        width: "32%",
         minWidth: "310px",
         height: "auto",
         cursor: "pointer",
@@ -12,7 +12,7 @@ export default (theme: ITheme) => ({
         boxShadow: theme.shadow[1],
         margin: "10px 5px",
         backgroundColor: "#FFF",
-        flexGrow: 1,
+        //flexGrow: 1,
         "@media (max-width: 620px)": {
             width: "100%",
         },
@@ -85,8 +85,8 @@ export default (theme: ITheme) => ({
         maxWidth: "30%",
         borderRadius: "32px",
         fontSize: "18px",
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.primary.text,
+        backgroundColor: theme.palette.primary.toString(),
+        color: theme.palette.primary.isLight() ? "#FFF" : "#000",
         zIndex: 900,
         boxShadow: theme.shadow[2]
     }

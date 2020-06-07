@@ -12,10 +12,10 @@ export default (theme: ITheme) => ({
 
         "&:hover": {
             '&::-webkit-scrollbar': {
-                backgroundColor: theme.palette.background.main,
+                backgroundColor: theme.palette.background.toString(),
             },
             '&::-webkit-scrollbar-thumb': {
-                backgroundColor: theme.palette.primary.main // TODO: theme.palette.background.darker,
+                backgroundColor: theme.palette.primary.toString() // TODO: theme.palette.background.darker,
             }
         },
 
@@ -55,10 +55,10 @@ export default (theme: ITheme) => ({
         textShadow: "1px 1px 1px rgba(0,0,0,0.004)",
 
         "&:hover, &:active": {
-            borderColor: theme.palette.primary.main,
+            borderColor: theme.palette.primary.toString(),
 
             "& svg path": {
-                fill: theme.palette.primary.main,
+                fill: theme.palette.primary.toString(),
                 transition: "all 155ms ease"
             }
         }

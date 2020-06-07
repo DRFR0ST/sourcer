@@ -19,7 +19,7 @@ export default
             author_id: "000-420",
             created_at: "Thu Jun 04 2020 21:54:13 GMT+0200 (Central European Summer Time)",
             languages: [ "en_US", "pl_PL" ],
-            topics: [ "technology", "offtopic" ],
+            topics: [ "javascript", "offtopic" ],
             thumbnail_url: new Unsplash("NDhYQPglGoA", {width: window.innerWidth, height: 300}).url ,
             short: "Qui ea nostrud laborum sint laborum commodo et. Adipisicing consectetur duis ex non enim est cillum minim exercitation sit ullamco. Occaecat aliqua occaecat et elit duis elit sunt ea minim laboris officia tempor et."
         },
