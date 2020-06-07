@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/sourcer/static/css/main.44f6492c.chunk.css",
-    "main.js": "/sourcer/static/js/main.88e62605.chunk.js",
-    "main.js.map": "/sourcer/static/js/main.88e62605.chunk.js.map",
+    "main.css": "/sourcer/static/css/main.7d932c3f.chunk.css",
+    "main.js": "/sourcer/static/js/main.a088d9d1.chunk.js",
+    "main.js.map": "/sourcer/static/js/main.a088d9d1.chunk.js.map",
     "runtime-main.js": "/sourcer/static/js/runtime-main.fbda0296.js",
     "runtime-main.js.map": "/sourcer/static/js/runtime-main.fbda0296.js.map",
-    "static/js/2.aa4e0c6e.chunk.js": "/sourcer/static/js/2.aa4e0c6e.chunk.js",
-    "static/js/2.aa4e0c6e.chunk.js.map": "/sourcer/static/js/2.aa4e0c6e.chunk.js.map",
+    "static/js/2.c96542cd.chunk.js": "/sourcer/static/js/2.c96542cd.chunk.js",
+    "static/js/2.c96542cd.chunk.js.map": "/sourcer/static/js/2.c96542cd.chunk.js.map",
     "index.html": "/sourcer/index.html",
-    "precache-manifest.baf6ff96973f5fed3b53a2fa07968f33.js": "/sourcer/precache-manifest.baf6ff96973f5fed3b53a2fa07968f33.js",
+    "precache-manifest.9bd115e7d1fc5b417e43d8a7d325825e.js": "/sourcer/precache-manifest.9bd115e7d1fc5b417e43d8a7d325825e.js",
     "service-worker.js": "/sourcer/service-worker.js",
-    "static/css/main.44f6492c.chunk.css.map": "/sourcer/static/css/main.44f6492c.chunk.css.map",
-    "static/js/2.aa4e0c6e.chunk.js.LICENSE.txt": "/sourcer/static/js/2.aa4e0c6e.chunk.js.LICENSE.txt",
-    "static/media/hello-world--en_US.md": "/sourcer/static/media/hello-world--en_US.038085a8.md",
-    "static/media/hello-world--pl_PL.md": "/sourcer/static/media/hello-world--pl_PL.010d7a53.md",
-    "static/media/rudy--en_US.md": "/sourcer/static/media/rudy--en_US.f727d1ee.md",
-    "static/media/rudy--pl_PL.md": "/sourcer/static/media/rudy--pl_PL.1adfb520.md",
-    "static/media/welcome-to-jamrock--en_US.md": "/sourcer/static/media/welcome-to-jamrock--en_US.5a93df03.md"
+    "static/css/main.7d932c3f.chunk.css.map": "/sourcer/static/css/main.7d932c3f.chunk.css.map",
+    "static/js/2.c96542cd.chunk.js.LICENSE.txt": "/sourcer/static/js/2.c96542cd.chunk.js.LICENSE.txt",
+    "static/media/hello-world--en_US.md": "/sourcer/static/media/hello-world--en_US.67e5a432.md",
+    "static/media/hello-world--pl_PL.md": "/sourcer/static/media/hello-world--pl_PL.68ee17e2.md",
+    "static/media/rudy--en_US.md": "/sourcer/static/media/rudy--en_US.b7beff9a.md",
+    "static/media/rudy--pl_PL.md": "/sourcer/static/media/rudy--pl_PL.888179a9.md",
+    "static/media/welcome-to-jamrock--en_US.md": "/sourcer/static/media/welcome-to-jamrock--en_US.355e5899.md"
   },
   "entrypoints": [
     "static/js/runtime-main.fbda0296.js",
-    "static/js/2.aa4e0c6e.chunk.js",
-    "static/css/main.44f6492c.chunk.css",
-    "static/js/main.88e62605.chunk.js"
+    "static/js/2.c96542cd.chunk.js",
+    "static/css/main.7d932c3f.chunk.css",
+    "static/js/main.a088d9d1.chunk.js"
   ]
 }
