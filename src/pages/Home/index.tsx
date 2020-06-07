@@ -37,7 +37,7 @@ const Home = () => {
                 options={{}} // default {}
                 disableImagesLoaded={false} // default false
             >
-               { posts.map(post => <Card {...post} />) }
+               { posts.map(post => <Card key={post.id} {...post} />) }
             </Masonry>
         </div>
     </div>

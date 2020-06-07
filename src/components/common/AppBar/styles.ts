@@ -23,6 +23,32 @@ export default (theme: ITheme) => ({
     },
     icon: {
         margin: "0 5px"
+    },
+
+
+
+    input: {
+        outline: "none",
+        border: 0,
+        height: "64px",
+        fontSize: "28px",
+        backgroundColor: theme.palette.background.toString(),
+        width: "100%",
+        
+    },
+    
+    inputWrapper: {
+        padding: "0 32px",
+        boxShadow: theme.shadow[1],
+        backgroundColor: theme.palette.background.toString(),
+        borderRadius: "32px",
+    },
+
+    outputWrapper: {
+        position: "relative",
+        marginTop: "15px",
+        backgroundColor: theme.palette.background.darken(0.2).toString(),
+        borderRadius: "8px"
     }
     
 });

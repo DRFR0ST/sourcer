@@ -45,7 +45,7 @@ export default
         },
         {
             id: "rudypedal",
-            title: "Rudy Tytuł",
+            title: "Rudy Pedał",
             author_id: "100-000",
             created_at: "Thu Jun 04 2020 21:54:13 GMT+0200 (Central European Summer Time)",
             languages: [ "en_US" ],
