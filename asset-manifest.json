@@ -1,27 +1,29 @@
 {
   "files": {
     "main.css": "/sourcer/static/css/main.7d932c3f.chunk.css",
-    "main.js": "/sourcer/static/js/main.a088d9d1.chunk.js",
-    "main.js.map": "/sourcer/static/js/main.a088d9d1.chunk.js.map",
+    "main.js": "/sourcer/static/js/main.8f34d754.chunk.js",
+    "main.js.map": "/sourcer/static/js/main.8f34d754.chunk.js.map",
     "runtime-main.js": "/sourcer/static/js/runtime-main.fbda0296.js",
     "runtime-main.js.map": "/sourcer/static/js/runtime-main.fbda0296.js.map",
-    "static/js/2.c96542cd.chunk.js": "/sourcer/static/js/2.c96542cd.chunk.js",
-    "static/js/2.c96542cd.chunk.js.map": "/sourcer/static/js/2.c96542cd.chunk.js.map",
+    "static/js/2.909be54b.chunk.js": "/sourcer/static/js/2.909be54b.chunk.js",
+    "static/js/2.909be54b.chunk.js.map": "/sourcer/static/js/2.909be54b.chunk.js.map",
     "index.html": "/sourcer/index.html",
-    "precache-manifest.9bd115e7d1fc5b417e43d8a7d325825e.js": "/sourcer/precache-manifest.9bd115e7d1fc5b417e43d8a7d325825e.js",
+    "precache-manifest.a9033dfc2db16b2b7cd3906526c902be.js": "/sourcer/precache-manifest.a9033dfc2db16b2b7cd3906526c902be.js",
     "service-worker.js": "/sourcer/service-worker.js",
     "static/css/main.7d932c3f.chunk.css.map": "/sourcer/static/css/main.7d932c3f.chunk.css.map",
-    "static/js/2.c96542cd.chunk.js.LICENSE.txt": "/sourcer/static/js/2.c96542cd.chunk.js.LICENSE.txt",
+    "static/js/2.909be54b.chunk.js.LICENSE.txt": "/sourcer/static/js/2.909be54b.chunk.js.LICENSE.txt",
     "static/media/hello-world--en_US.md": "/sourcer/static/media/hello-world--en_US.67e5a432.md",
     "static/media/hello-world--pl_PL.md": "/sourcer/static/media/hello-world--pl_PL.68ee17e2.md",
     "static/media/rudy--en_US.md": "/sourcer/static/media/rudy--en_US.b7beff9a.md",
     "static/media/rudy--pl_PL.md": "/sourcer/static/media/rudy--pl_PL.888179a9.md",
+    "static/media/rudypedal--en_US.md": "/sourcer/static/media/rudypedal--en_US.b7beff9a.md",
+    "static/media/rudypedal--pl_PL.md": "/sourcer/static/media/rudypedal--pl_PL.888179a9.md",
     "static/media/welcome-to-jamrock--en_US.md": "/sourcer/static/media/welcome-to-jamrock--en_US.355e5899.md"
   },
   "entrypoints": [
     "static/js/runtime-main.fbda0296.js",
-    "static/js/2.c96542cd.chunk.js",
+    "static/js/2.909be54b.chunk.js",
     "static/css/main.7d932c3f.chunk.css",
-    "static/js/main.a088d9d1.chunk.js"
+    "static/js/main.8f34d754.chunk.js"
   ]
 }
