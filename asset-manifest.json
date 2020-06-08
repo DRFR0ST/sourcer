@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/sourcer/static/css/main.7d932c3f.chunk.css",
-    "main.js": "/sourcer/static/js/main.e0214e0f.chunk.js",
-    "main.js.map": "/sourcer/static/js/main.e0214e0f.chunk.js.map",
-    "runtime-main.js": "/sourcer/static/js/runtime-main.fbda0296.js",
-    "runtime-main.js.map": "/sourcer/static/js/runtime-main.fbda0296.js.map",
-    "static/js/2.2268514f.chunk.js": "/sourcer/static/js/2.2268514f.chunk.js",
-    "static/js/2.2268514f.chunk.js.map": "/sourcer/static/js/2.2268514f.chunk.js.map",
-    "index.html": "/sourcer/index.html",
-    "precache-manifest.b14bdafe9b13b8bbb56cea74a35bdde2.js": "/sourcer/precache-manifest.b14bdafe9b13b8bbb56cea74a35bdde2.js",
-    "service-worker.js": "/sourcer/service-worker.js",
-    "static/css/main.7d932c3f.chunk.css.map": "/sourcer/static/css/main.7d932c3f.chunk.css.map",
-    "static/js/2.2268514f.chunk.js.LICENSE.txt": "/sourcer/static/js/2.2268514f.chunk.js.LICENSE.txt",
-    "static/media/empty.svg": "/sourcer/static/media/empty.0fc775c4.svg",
-    "static/media/hello-world--en_US.md": "/sourcer/static/media/hello-world--en_US.67e5a432.md",
-    "static/media/hello-world--pl_PL.md": "/sourcer/static/media/hello-world--pl_PL.68ee17e2.md",
-    "static/media/rudy--en_US.md": "/sourcer/static/media/rudy--en_US.b7beff9a.md",
-    "static/media/rudy--pl_PL.md": "/sourcer/static/media/rudy--pl_PL.888179a9.md",
-    "static/media/rudypedal--en_US.md": "/sourcer/static/media/rudypedal--en_US.b7beff9a.md",
-    "static/media/rudypedal--pl_PL.md": "/sourcer/static/media/rudypedal--pl_PL.888179a9.md",
-    "static/media/welcome-to-jamrock--en_US.md": "/sourcer/static/media/welcome-to-jamrock--en_US.355e5899.md"
+    "main.css": "/static/css/main.7d932c3f.chunk.css",
+    "main.js": "/static/js/main.b6349a03.chunk.js",
+    "main.js.map": "/static/js/main.b6349a03.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a40d4c96.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a40d4c96.js.map",
+    "static/js/2.2268514f.chunk.js": "/static/js/2.2268514f.chunk.js",
+    "static/js/2.2268514f.chunk.js.map": "/static/js/2.2268514f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.4ef1acbecb9a006746e949b21038fa09.js": "/precache-manifest.4ef1acbecb9a006746e949b21038fa09.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.7d932c3f.chunk.css.map": "/static/css/main.7d932c3f.chunk.css.map",
+    "static/js/2.2268514f.chunk.js.LICENSE.txt": "/static/js/2.2268514f.chunk.js.LICENSE.txt",
+    "static/media/empty.svg": "/static/media/empty.0fc775c4.svg",
+    "static/media/hello-world--en_US.md": "/static/media/hello-world--en_US.67e5a432.md",
+    "static/media/hello-world--pl_PL.md": "/static/media/hello-world--pl_PL.68ee17e2.md",
+    "static/media/rudy--en_US.md": "/static/media/rudy--en_US.b7beff9a.md",
+    "static/media/rudy--pl_PL.md": "/static/media/rudy--pl_PL.888179a9.md",
+    "static/media/rudypedal--en_US.md": "/static/media/rudypedal--en_US.b7beff9a.md",
+    "static/media/rudypedal--pl_PL.md": "/static/media/rudypedal--pl_PL.888179a9.md",
+    "static/media/welcome-to-jamrock--en_US.md": "/static/media/welcome-to-jamrock--en_US.355e5899.md"
   },
   "entrypoints": [
-    "static/js/runtime-main.fbda0296.js",
+    "static/js/runtime-main.a40d4c96.js",
     "static/js/2.2268514f.chunk.js",
     "static/css/main.7d932c3f.chunk.css",
-    "static/js/main.e0214e0f.chunk.js"
+    "static/js/main.b6349a03.chunk.js"
   ]
 }
