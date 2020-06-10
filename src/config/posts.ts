@@ -53,4 +53,14 @@ export default
             thumbnail_url: new Unsplash("random", {width: window.innerWidth, height: 300}).url,
             short: "Eu magna pariatur anim Lorem pariatur ad laboris deserunt exercitation nisi laboris incididunt mollit sit. Nulla dolore id aliqua voluptate eiusmod cillum. Proident excepteur consequat cillum labore incididunt ex aliqua incididunt cillum ea dolor ea Lorem."
         },
+{
+id: "reset-wordpress-password",
+title: "Reset WordPress password with FTP",
+author_id: "000-420",
+created_at: "Wed Jun 10 2020 13:00:00 GTM+0200 (Central European Summer Time)",
+languages: ["en_US"],
+topics: ["wordpress"],
+thumbnail_url: new Unsplash("random", {width: window.innerWidth, height: 300}).url,
+short: "..."
+}
     ] as IPostData[];
